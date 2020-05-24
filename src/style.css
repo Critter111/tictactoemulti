@@ -1,0 +1,10 @@
+div.boxes{
+    display: inline-block; 
+    height: 200px;
+    width: 200px;
+    background-color: chartreuse;
+    border: solid;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    text-align: center;
+}
