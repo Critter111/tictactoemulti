@@ -48,7 +48,7 @@
 })
 socket.on('invalidroom', (data) => {
   
-    alert("aap chutiye hain");
+    alert("invalid room");
 
 
 })
