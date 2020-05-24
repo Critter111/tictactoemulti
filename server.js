@@ -343,18 +343,24 @@ io.on('connection', (socket) => {
   })
 
   socket.on('join', (data) => {
-  if (rooms[data.roomid].length==1){
-    rooms[data.roomid][1]=socket.id;
-    socket.emit('joined', {
-        roomid: data.roomid,
-        
-    })
-  }else{
-    socket.emit('invalidroom', {
-       
-        
-    })
-  }
+    if(rooms[data.roomid] != undefined){
+        if (rooms[data.roomid].length==1){
+            rooms[data.roomid][1]=socket.id;
+            socket.emit('joined', {
+                roomid: data.roomid,
+                
+            })
+          }else{
+            socket.emit('invalidroom', {
+               
+                
+            })
+          }
+    }else{
+        socket.emit('invalidroom',{
+
+        })
+    }
 
 })
 })

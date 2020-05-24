@@ -46,7 +46,7 @@
     symbol='O';
 
 })
-socket.on('invalidroom', (data) => {
+socket.on('invalidroom', () => {
   
     alert("invalid room");
 
